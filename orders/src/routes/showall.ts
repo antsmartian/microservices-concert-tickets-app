@@ -1,4 +1,4 @@
-import { currentUser, requireAuth } from '@applinh/mcta-common';
+import { currentUser, requireAuth } from '@antsmartian/mcta-common';
 import express, {Request, Response} from 'express';
 import { Order } from '../models/order.model';
 

@@ -1,4 +1,4 @@
-import { OrderStatus } from '@applinh/mcta-common';
+import { OrderStatus } from '@antsmartian/mcta-common';
 import request from 'supertest';
 import { app } from '../../app';
 import { Ticket } from '../../models/ticket.model';

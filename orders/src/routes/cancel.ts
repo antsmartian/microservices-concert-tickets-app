@@ -1,4 +1,4 @@
-import { NotFoundError, OrderStatus, requireAuth } from '@applinh/mcta-common';
+import { NotFoundError, OrderStatus, requireAuth } from '@antsmartian/mcta-common';
 import express, {Request, Response} from 'express';
 import { Order } from '../models/order.model';
 import { natsWrapper } from '../nats-wrapper';

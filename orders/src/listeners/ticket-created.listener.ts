@@ -1,7 +1,7 @@
 import { Message } from "node-nats-streaming";
-import { TicketCreatedEvent } from "@applinh/mcta-common";
-import {BaseListener} from '@applinh/mcta-common';
-import { Subjects } from "@applinh/mcta-common";
+import { TicketCreatedEvent } from "@antsmartian/mcta-common";
+import {BaseListener} from '@antsmartian/mcta-common';
+import { Subjects } from "@antsmartian/mcta-common";
 import { queueGroupName } from "./queue-group-name";
 import { Ticket } from "../models/ticket.model";
 

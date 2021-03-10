@@ -40,7 +40,7 @@ The `payments` service implements Stripe.
 **ONE** last thing : 
 
  - If you decide to publish the `common` pkg to your own repo, you'll have to publish it to Github packages.
-    - So, replace every `applinh` or `AppliNH` with your github username. They mostly lie in the `.npmrc` files or in the `Makefile`, but also in the `package.json` of `common`, `auth`, `payments`, `orders`, `expiration` and `tickets`.
+    - So, replace every `antsmartian` or `antsmartian` with your github username. They mostly lie in the `.npmrc` files or in the `Makefile`, but also in the `package.json` of `common`, `auth`, `payments`, `orders`, `expiration` and `tickets`.
     - You then can run `make pub-common` to publish to your Github packages
     - and `make sync-common-all` to install package in all the microservices.
 

@@ -1,7 +1,7 @@
 import { Message } from "node-nats-streaming";
-import { ExpirationCompleteEvent, NotFoundError, OrderStatus } from "@applinh/mcta-common";
-import {BaseListener} from '@applinh/mcta-common';
-import { Subjects } from "@applinh/mcta-common";
+import { ExpirationCompleteEvent, NotFoundError, OrderStatus } from "@antsmartian/mcta-common";
+import {BaseListener} from '@antsmartian/mcta-common';
+import { Subjects } from "@antsmartian/mcta-common";
 import { queueGroupName } from "./queue-group-name";
 import { Ticket } from "../models/ticket.model";
 import { Order } from "../models/order.model";

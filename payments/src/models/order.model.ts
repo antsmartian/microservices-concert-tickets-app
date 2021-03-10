@@ -1,5 +1,5 @@
 import mongoose,  { Schema, Document, Model, model } from 'mongoose';
-import {OrderStatus} from '@applinh/mcta-common';
+import {OrderStatus} from '@antsmartian/mcta-common';
 import {updateIfCurrentPlugin} from 'mongoose-update-if-current';
 
 // Model(Attributes): Document

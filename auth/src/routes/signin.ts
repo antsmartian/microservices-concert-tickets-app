@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express';
 import { body } from 'express-validator';
-import { BadRequestError,validateRequest } from '@applinh/mcta-common';
+import { BadRequestError,validateRequest } from '@antsmartian/mcta-common';
 import { User } from '../models/user.model';
 import { Password } from '../utils/password';
 import jwt from 'jsonwebtoken';

@@ -2,18 +2,19 @@
 minikube-clean:
 	-minikube delete
 	minikube start
-	minikube addons enable ingress
+	minikube start --vm=true
 
 # Start-dev from scratch
 start-dev:
 	$(MAKE) minikube-clean	
-	kubectl expose deployment ingress-nginx-controller --target-port=80 --type=NodePort -n kube-system
 	$(MAKE) k-secrets
 	skaffold dev
 
 k-secrets:
 	kubectl create secret generic jwt-secret --from-literal=JWT_KEY=jwthash123
 	kubectl create secret generic stripe-secret --from-env-file=./.stripe-secret.env
+# 	kubectl create secret generic stripe-secret  --from-literal=STRIPE_KEY='sk_test_51HhcsHLLmBg38ZIoFZX1HZbZlHUyXcl5SJYCrA2FA5TXUK4zH4NWgzguGOT5jvbFm92re3XTLG2L8EvAHSlTczL700vnb0sao3'
+# 	kubectl create secret generic stripe-secret  --from-literal=PUBLIC_STRIPE_KEY='pk_test_51HhcsHLLmBg38ZIoL56t4rYCchFfae3vogixv5Yqsr30aD38zs2rNczmsNm8fdByzRnqhlp2XExjMEduKLNrg6dj00KxOXIHRs'
 
 npm-i-all:
 	npx recursive-install
@@ -27,20 +28,20 @@ sync-common-all: sync-common-auth sync-common-tickets sync-common-orders sync-co
 
 # Reinstall the common pkg from the private npm repo
 sync-common-auth:
-	cd auth/ ; npm i @applinh/mcta-common
+	cd auth/ ; npm i @antsmartian/mcta-common
 
 # Reinstall the common pkg from the private npm repo
 sync-common-tickets:
-	cd tickets/ ; npm i @applinh/mcta-common
+	cd tickets/ ; npm i @antsmartian/mcta-common
 
 # Reinstall the common pkg from the private npm repo
 sync-common-orders:
-	cd orders/ ; npm i @applinh/mcta-common
+	cd orders/ ; npm i @antsmartian/mcta-common
 
 # Reinstall the common pkg from the private npm repo
 sync-common-expiration:
-	cd expiration/ ; npm i @applinh/mcta-common
+	cd expiration/ ; npm i @antsmartian/mcta-common
 
 # Reinstall the common pkg from the private npm repo
 sync-common-payments:
-	cd payments/ ; npm i @applinh/mcta-common
+	cd payments/ ; npm i @antsmartian/mcta-common

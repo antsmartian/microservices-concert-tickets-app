@@ -1,4 +1,4 @@
-import { OrderCreatedEvent, OrderStatus } from "@applinh/mcta-common";
+import { OrderCreatedEvent, OrderStatus } from "@antsmartian/mcta-common";
 import { natsWrapper } from "../../nats-wrapper";
 import { OrderCreatedListener } from "../order-created.listener";
 import mongoose from "mongoose";

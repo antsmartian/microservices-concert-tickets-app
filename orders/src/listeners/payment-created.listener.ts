@@ -1,7 +1,7 @@
 import { Message } from "node-nats-streaming";
-import { NotFoundError, OrderStatus, PaymentCreatedEvent } from "@applinh/mcta-common";
-import {BaseListener} from '@applinh/mcta-common';
-import { Subjects } from "@applinh/mcta-common";
+import { NotFoundError, OrderStatus, PaymentCreatedEvent } from "@antsmartian/mcta-common";
+import {BaseListener} from '@antsmartian/mcta-common';
+import { Subjects } from "@antsmartian/mcta-common";
 import { queueGroupName } from "./queue-group-name";
 import { Order } from "../models/order.model";
 

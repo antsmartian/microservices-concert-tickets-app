@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import { currentUser } from '@applinh/mcta-common';
+import { currentUser } from '@antsmartian/mcta-common';
 
 const router = express.Router();
 

@@ -1,4 +1,4 @@
-import { OrderCancelledEvent, OrderStatus } from "@applinh/mcta-common";
+import { OrderCancelledEvent, OrderStatus } from "@antsmartian/mcta-common";
 import { natsWrapper } from "../../nats-wrapper";
 import { OrderCancelledListener } from "../order-cancelled.listener";
 import mongoose from "mongoose";
